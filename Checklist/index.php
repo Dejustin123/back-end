@@ -1,7 +1,8 @@
 <?php include "header.php";?>
 <?php require "function.php";?>
 
-<Div class="container">
+
+<div class="container">
     <?php
     //checks krijgen
     $result = GetAllCheck();
@@ -26,7 +27,9 @@ foreach ($lists as $list)
         {
         ?>
     <div id="container-fluid" class="homepage-container" style="background-color:crimson; padding:50px ;">
-        <div class="left">
+  </div>
+
+        <!-- <div class="left">
             <h2 class="title"><?php echo $results['Name']; ?></h2><i class="fas fa-user"></i>
             <p class="text"><?php echo $results['Description']; ?></p>
             <p class="status" ><?php echo $results['Status']?></p>
@@ -36,7 +39,7 @@ foreach ($lists as $list)
             <p class="date"><?php echo $results['date'];?></p>
             <a class="button-index" href="modules/edit.php?ID=<?php echo $results['ID'];?>">Edit<i class="fas fa-pencil-alt"></i></a>
             <a class="button-index-del" href="modules/delete.php?ID=<?php echo $results['ID'];?>">Delete<i class="fas fa-trash-alt"></i></a>
-        </div>
+        </div> -->
     </div>
     <?php 
         }//end of if 
@@ -46,5 +49,40 @@ foreach ($lists as $list)
     <?php
 }
     ?>
-</Div>
+</div>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <table id="table_id" class="display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>List id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php   
+          foreach ($result as $results){ ?>
+            <tr>
+              <td><?php echo $results['Name']; ?></td>
+              <td><?php echo $results['Description']; ?></td>
+              <td><?php echo $results['Status']?></td>
+              <td><?php echo $results['Time'];?></td>
+              <td><?php echo $results['date'];?></td>
+              <td><?php echo $results['list_id'];?></td>
+            </tr>
+            <?php // end of foreach 
+          };?>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
 <?php include "footer.php";?>
