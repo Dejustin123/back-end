@@ -1,7 +1,7 @@
 <?php include "../module-header.php";?>
 <?php require "../function.php";?>
 <?php
-    $data = Getcheck($_GET["ID"]);
+    $data = getCheck($_GET["ID"]);
 ?>
 <div id="container-edit">
     <form method="post" id="edit-form" action="edit_function.php">

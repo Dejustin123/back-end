@@ -10,5 +10,5 @@
         <input class="form-control" type="text" name="Name" disabled value="<?php echo $data["name"];?>"><i class="fa fa-user"></i>
         <button class="btn btn-light" name="submit">Verwijder deze list?</button>
     </form>
-</Div>
+</div>
 <?php include "../footer.php";?>

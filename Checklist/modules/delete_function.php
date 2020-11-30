@@ -4,10 +4,10 @@ require '../function.php';
 
 if (isset($_POST))
 {
-	DeleteCheck($_POST['ID']);
+	deleteCheck($_POST['ID']);
 }
 //delete specific check function
-function DeleteCheck($id)
+function deleteCheck($id)
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare("DELETE FROM `checklist` WHERE ID=:id");

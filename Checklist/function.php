@@ -18,7 +18,7 @@ function openDatabaseConnection(){
 }
 
 // Get functie's om querys uit te voeren
-function GetAllCheck()
+function getAllCheck()
 {
 
 	$sql = "
@@ -48,8 +48,9 @@ function getList()
 	return $result;
 	$conn = NULL;
 }
+
 //krijgt specifieke list
-function getlistspec($id)
+function getListSpec($id)
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('SELECT * FROM `list` WHERE id=:id');
@@ -59,7 +60,7 @@ function getlistspec($id)
 	$conn = NULL;
 }
 //krijgt specifieke check
-function Getcheck($id)
+function getCheck($id)
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('SELECT * FROM `checklist` WHERE ID=:id');

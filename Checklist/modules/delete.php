@@ -2,7 +2,7 @@
 <?php require "../function.php";?>
 
 <?php
-    $data = Getcheck($_GET["ID"]);
+    $data = getCheck($_GET["ID"]);
 ?>
 <div id="container-Delete">
     <form method="post" id="edit-form" action="delete_function.php">
@@ -14,5 +14,5 @@
         <input class="form-control" type="time" name='Time' disabled value="<?php echo $data["Time"];?>">
         <button class="btn btn-light" name="submit">Verwijder uw bericht</button>
     </form>
-</Div>
+</div>
 <?php include "../footer.php";?>

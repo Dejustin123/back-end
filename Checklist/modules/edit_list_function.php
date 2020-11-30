@@ -5,10 +5,10 @@ require '../function.php';
 
 if (isset($_POST))
 {
-    Editlist($_POST);
+    editlist($_POST);
 }
 //edit list function
-function Editlist($input)
+function editlist($input)
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('UPDATE `list` SET name = :name WHERE `list` . id=:id');

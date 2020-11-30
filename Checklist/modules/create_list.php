@@ -6,11 +6,11 @@ $results = getList();
 ?>
 
 
-<Div class="form-create">
+<div class="form-create">
     <h1>Maak een list aan</h1>
     <form method="post" action="create_list_function.php" name="create_list_form">
         <input class="form-control" type="text" value="name" name="Name"></input>
         <button class="btn btn-light" name="submit" >Maak een list aan</button>
     </form>
-</Div>
+</div>
 <?php include "../footer.php";?>

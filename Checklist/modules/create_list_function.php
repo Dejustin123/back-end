@@ -4,11 +4,11 @@ require '../function.php';
 
 if (isset($_POST))
 {
-	CreateList();
+	createList();
 	// var_dump($_POST);
 }
 //create list function
-function CreateList()
+function createList()
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare(

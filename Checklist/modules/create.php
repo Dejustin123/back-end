@@ -2,7 +2,7 @@
 <?php require "../function.php";?>
 
 
-<Div class="form-create">
+<div class="form-create">
     <h1>Maak een taak aan</h1>
     <form method="post" action="create_function.php" name="create_form">
         <input class="form-control" type="text" value="name" name="Name"></input>
@@ -19,5 +19,5 @@
         <input type="hidden" name="list_id" id="list_id" value="<?php echo $_GET['list_id'] ?>">
         <button class="btn btn-light" name="submit" >Maak Check aan</button>
     </form>
-</Div>
+</div>
 <?php include "../footer.php";?>

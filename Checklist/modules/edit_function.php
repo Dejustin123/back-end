@@ -6,10 +6,10 @@ require '../function.php';
 
 if (isset($_POST))
 {
-    EditCheck($_POST);
+    editCheck($_POST);
 }
 //edit taak function
-function EditCheck($input)
+function editCheck($input)
 {
 	$input['ID'] = intval($input['ID']);
 	$conn = openDatabaseConnection();

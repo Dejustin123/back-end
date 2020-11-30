@@ -8,7 +8,7 @@ if (isset($_POST))
 	CreateCheck();
 }
 //create check function
-function CreateCheck()
+function createCheck()
 {
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('INSERT INTO `checklist` (`ID`, `Name`, `Description`, `Status`,`date`,`Time`,`list_id`)
